@@ -1,52 +1,16 @@
 import numpy as np
-from scipy import signal
+import scipy as sp 
 
-import matplotlib.pyplot as plt
+def generate_sine_wave(frequency, duration, sample_rate):
+    t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
+    waveform = np.sin(2 * np.pi * frequency * t)
+    return t, waveform
 
-# ---------- Signal Generators ----------
+def pulse(t, amp):
+    return np.where((t >= -0.5) & (t <= 0.5), amp, 0.0)
 
-def generate_sine(freq=1, amp=1, duration=1, sampling_rate=1000):
-    """
-    Generate a sinusoidal signal.
-    """
-    t = np.linspace(0, duration, int(sampling_rate*duration), endpoint=False)
-    x = amp * np.sin(2 * np.pi * freq * t)
-    return t, x
+def periodic_pulse(t, duty_cycle):
+    return sp.signal.square(t, duty_cycle)
 
-def generate_step(duration=1, sampling_rate=1000):
-    """
-    Generate a unit step signal.
-    """
-    t = np.linspace(0, duration, int(sampling_rate*duration), endpoint=False)
-    x = np.heaviside(t, 1)  # step starts at 0
-    return t, x
-
-# ---------- Signal Operations ----------
-
-def time_shift(t, x, shift):
-    """
-    Shift signal in time by 'shift' units.
-    """
-    return t + shift, x
-
-def time_scale(t, x, scale):
-    """
-    Scale signal in time by 'scale' factor.
-    """
-    return t * scale, x
-
-# ---------- Plotting Helper ----------
-
-def plot_signal(t, x, title="Signal", filename=None):
-    """
-    Plot and optionally save a signal.
-    """
-    plt.figure()
-    plt.plot(t, x)
-    plt.title(title)
-    plt.xlabel("Time (s)")
-    plt.ylabel("Amplitude")
-    plt.grid(True)
-    if filename:
-        plt.savefig(filename, dpi=150)
-    plt.show()
+def sawtooth(t, width):
+    return sp.signal.sawtooth(t, width)
