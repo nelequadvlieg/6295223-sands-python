@@ -1,8 +1,19 @@
-# 6295223-sands-python
-pCreating and manipulating signals project
-This project is about creating, manipulating and plotting signals. In the repository you will find a file that contains all the functions of the signals. There are also files where the signals have been plotted and manipulated.
+# Signal Generation Project
+A lightweight Python program for creating and displaying basic signals.
+## Signals included
+This project produces and visualizes the following types of signals:
 
-How to run
-To run the project, you need to have Python installed. In the repository there are a number of files. To run a file use the command:
+Sinusoidal wave
 
-python <filename>.pyroject
+Unit step function
+
+Sinusoidal wave with a time delay
+
+Sinusoidal wave with both a delay and time scaling
+## Running the system
+Make sure you have Python installed on your system. To execute the project, run:
+
+python run.py
+
+
+After running, you will see four plots showing the signals, with time on the horizontal axis and amplitude on the vertical axis.
