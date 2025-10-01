@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('TkAgg')
 
-
 from signals import generate_sine_wave, generate_step_function
 
 time, sine1 = generate_sine_wave(frequency=1, duration=1, time_shift=0, time_scale=1)
@@ -38,6 +37,5 @@ plt.title("Time-Shifted and Time-Scaled Sinusoidal Signal")
 plt.xlabel("Time")
 plt.ylabel("Amplitude")
 plt.grid(True)
-
 plt.show()
 print("Script finished, waiting for you to close the plot windows.")

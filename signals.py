@@ -1,17 +1,11 @@
-import numpy as np
+import numpy as np 
 
-def sine_wave(f, duration, shift=0, scale=1, points=100):
-    """
-    Generate a sine wave with frequency f, duration, optional time shift and scaling.
-    """
-    time = np.linspace(0, duration, points)
-    y = np.sin(2 * np.pi * f * (time * scale) + shift)
-    return time, y
+def generate_sine_wave(frequency, duration, time_shift, time_scale):
+    t = np.linspace(0, duration, 100)
+    wave = np.sin(2 * np.pi * frequency * t * time_scale + time_shift)
+    return t, wave 
 
-def step_function(time, threshold=0):
-    """
-    Generate a unit step function where the step occurs at 'threshold'.
-    """
-    step = (time >= threshold).astype(int)
-    return step
+def generate_step_function(t, step_time):
+    return np.where(t < step_time, 0, 1)
+
 exit()
