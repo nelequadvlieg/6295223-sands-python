@@ -1,19 +1,28 @@
-# Signal Generation Project
-A lightweight Python program for creating and displaying basic signals.
-## Signals included
-This project produces and visualizes the following types of signals:
+# Signal Creation and Manipulation Project
+This Python project focuses on generating, modifying, and visualizing basic signals.
+It includes a collection of functions for signal generation as well as scripts that demonstrate how these signals can be plotted and manipulated.
+## Signals Covered
+The project creates and displays:
 
-Sinusoidal wave
+- A sinusoidal signal
 
-Unit step function
+- A unit step function
 
-Sinusoidal wave with a time delay
+- A time-shifted sinusoidal signal
 
-Sinusoidal wave with both a delay and time scaling
-## Running the system
-Make sure you have Python installed on your system. To execute the project, run:
+- A time-shifted and time-scaled sinusoidal signal
 
-python run.py
+## How to Run
+To run the project, ensure you have Python installed along with the required libraries (numpy, matplotlib, scipy).
+The repository contains multiple Python files:
+
+One file defines all the signal functions.
+
+Other files demonstrate plotting and transformations of the signals.
+
+Run a file using:
+
+python <filename>.py
 
 
-After running, you will see four plots showing the signals, with time on the horizontal axis and amplitude on the vertical axis.
+This will open plots of the signals with time on the x-axis and amplitude on the y-axis
