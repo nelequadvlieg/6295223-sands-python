@@ -6,5 +6,5 @@ build-backened = "steuptools.build_meta"
 name = "singal generator"
 version = "0.1.0"
 description = "A package for generating various signal waveforms"
-authors = [{name = "Nele Quadvlieg", email = "wanobel@tudelft.nl"}]
+authors = [{name = "Nele Quadvlieg", email = "N.A.H.M.Quadvlieg@student.tudelft.nl"}]
 dependencies = ["numpy", "matplotlib"]
