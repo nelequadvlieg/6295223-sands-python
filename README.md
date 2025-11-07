@@ -15,13 +15,16 @@ The project creates and displays:
 
 ## Quick start
 bash
+
 pip install numpy matplotlib
-python script.py
+
+'''python script.py'''
+
 pytest
 
 
 ## How to Run
-To run the project, ensure you have Python installed along with the required libraries (numpy, matplotlib, scipy).
+To run the project, ensure you have Python installed along with the required libraries (numpy, matplotlib).
 The repository contains multiple Python files:
 
 One file defines all the signal functions.
