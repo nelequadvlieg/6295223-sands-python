@@ -32,4 +32,3 @@ def generate_step_function(t, step_time):
     """
     return np.where(t < step_time, 0, 1)
 
-exit()
